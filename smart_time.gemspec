@@ -19,11 +19,25 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "test/helper.rb"
+    "lib/smart_time.rb",
+    "lib/smart_time/active_record_extension.rb",
+    "lib/smart_time/parser/ruby_date_parser.rb",
+    "lib/smart_time/parser/ruby_time_parser.rb",
+    "lib/smart_time/parser/smart_date_parser.rb",
+    "lib/smart_time/parser/smart_parser.rb",
+    "lib/smart_time/parser/smart_time_parser.rb",
+    "smart_time.gemspec",
+    "test/helper.rb",
+    "test/parser/test_smart_date_parser.rb",
+    "test/parser/test_smart_time_parser.rb",
+    "test/schema.rb",
+    "test/test_active_record_extension.rb",
+    "test/test_smart_time.rb"
   ]
   s.homepage = %q{http://github.com/mdaubs/smart_time}
   s.licenses = ["MIT"]
@@ -37,23 +51,29 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, [">= 3.0.0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.0"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<mocha>, [">= 0"])
     else
       s.add_dependency(%q<rails>, [">= 3.0.0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.0"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<mocha>, [">= 0"])
     end
   else
     s.add_dependency(%q<rails>, [">= 3.0.0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.0"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<mocha>, [">= 0"])
   end
 end
 
