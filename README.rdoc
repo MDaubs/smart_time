@@ -1,8 +1,30 @@
-= smart-time
+= smart_time
 
-Description goes here.
+The smart_time gem allows your date/time ActiveRecord attributes to be parsed using the formats already defined by you or Rails in Time::DATE_FORMATS and Date::DATE_FORMATS.  This allows you to capture date/time from text input fields using format strings that are already used by Rails to convert Dates and Times to Strings.  If a :format option is passed smart_time will force the use of the supplied format, otherwise it will attempt to parse using the formats defined in Time::DATE_FORMATS (for Times) and Date::DATE_FORMATS (for Dates).  If none of the formats match it will fail back to using the default Rails/Ruby parsing technique.
 
-== Contributing to smart-time
+== Getting Started
+
+1. Install the smart_time gem
+
+    gem install smart_time
+
+2. Use the <tt>smart_time</tt> macro in your models
+
+    class Event < ActiveRecord::Base
+			# Calling smart_time with no parameters activates smart_time for all columns that have a klass of Date or Time (aka db types :date, :time, :datetime, and :timestamp).
+			smart_time
+	    
+			# Or you can name just the attributes you want to activate
+      # smart_time :start_at
+      
+			# You can also explicitly pass a format string
+			# smart_time :start_at, :format => "%m/%d/%Y"
+		
+		end
+
+3. Enjoy! If something breaks, complain to the author or (preferably) fork it, fix it, make sure all tests still pass and create a pull request.
+
+== Contributing to smart_time
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -14,6 +36,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 . See LICENSE.txt for
+Copyright (c) 2011 Matthew Daubert. See LICENSE.txt for
 further details.
 
