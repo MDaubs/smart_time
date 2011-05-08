@@ -15,7 +15,7 @@ The smart_time gem allows your date/time ActiveRecord attributes to be parsed us
       smart_time
 
       # Or you can name just the attributes you want to activate
-      # smart_time :start_at
+      # smart_time :start_at, :end_at
 
       # You can also explicitly pass a format string
       # smart_time :start_at, :format => "%m/%d/%Y"
