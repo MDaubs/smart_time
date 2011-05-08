@@ -11,16 +11,16 @@ The smart_time gem allows your date/time ActiveRecord attributes to be parsed us
 2. Use the <tt>smart_time</tt> macro in your models
 
     class Event < ActiveRecord::Base
-			# Calling smart_time with no parameters activates smart_time for all columns that have a klass of Date or Time (aka db types :date, :time, :datetime, and :timestamp).
-			smart_time
-	    
-			# Or you can name just the attributes you want to activate
+      # Calling smart_time with no parameters activates smart_time for all columns that have a klass of Date or Time (aka db types :date, :time, :datetime, and :timestamp).
+      smart_time
+
+      # Or you can name just the attributes you want to activate
       # smart_time :start_at
-      
-			# You can also explicitly pass a format string
-			# smart_time :start_at, :format => "%m/%d/%Y"
-		
-		end
+
+      # You can also explicitly pass a format string
+      # smart_time :start_at, :format => "%m/%d/%Y"
+
+    end
 
 3. Enjoy! If something breaks, complain to the author or (preferably) fork it, fix it, make sure all tests still pass and create a pull request.
 
