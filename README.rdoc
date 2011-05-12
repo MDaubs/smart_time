@@ -6,13 +6,13 @@ The smart_time gem allows your date/time ActiveRecord attributes to be parsed us
 
 1. Add smart_time to your Gemfile:
 
-    gem install smart_time
+    gem 'smart_time'
 
-...and then install:
+2. Install:
 
     bundle install
 
-2. Use the <tt>smart_time</tt> macro in your models
+3. Use the <tt>smart_time</tt> macro in your models
 
     class Event < ActiveRecord::Base
       # Calling smart_time with no parameters activates smart_time for all columns that have a
@@ -27,7 +27,11 @@ The smart_time gem allows your date/time ActiveRecord attributes to be parsed us
 
     end
 
-3. Enjoy! If something breaks, complain to the author or (preferably) fork it, fix it, make sure all tests still pass and create a pull request.
+4. Enjoy! If something breaks, complain to the author or (preferably) fork it, fix it, make sure all tests still pass and create a pull request.
+
+== Roadmap
+
+* Implement validation so that format errors can be properly displayed back to the view
 
 == Contributing to smart_time
  
