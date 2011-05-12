@@ -1,12 +1,16 @@
 = smart_time
 
-The smart_time gem allows your date/time ActiveRecord attributes to be parsed using the formats already defined by you or Rails in Time::DATE_FORMATS and Date::DATE_FORMATS.  This allows you to capture date/time from text input fields using format strings that are already used by Rails to convert Dates and Times to Strings.  If a :format option is passed smart_time will force the use of the supplied format, otherwise it will attempt to parse using the formats defined in Time::DATE_FORMATS (for Times) and Date::DATE_FORMATS (for Dates).  If none of the formats match it will fail back to using the default Rails/Ruby parsing technique.
+The smart_time gem allows your date/time ActiveRecord attributes to be parsed using the formats already defined by you or Rails in Time::DATE_FORMATS and Date::DATE_FORMATS.  This allows you to capture date/time from text input fields using format strings that are already used by Rails to convert Dates and Times to Strings.  If a :format option is passed smart_time will force the use of the supplied format, otherwise it will attempt to parse using the formats defined in Time::DATE_FORMATS (for Times) and Date::DATE_FORMATS (for Dates).  If none of the formats match it will fail back to using the default Rails/Ruby parsing technique. Requires Rails 3.
 
 == Getting Started
 
-1. Install the smart_time gem
+1. Add smart_time to your Gemfile:
 
     gem install smart_time
+
+  ...and then install:
+
+    bundle install
 
 2. Use the <tt>smart_time</tt> macro in your models
 
