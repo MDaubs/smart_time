@@ -2,6 +2,6 @@ require 'helper'
 
 class TestGem < Test::Unit::TestCase
 
-	# TODO: Integration Tests
+  # TODO: Integration Tests
 
 end

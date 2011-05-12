@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/mdaubs/smart_time"
   gem.license = "MIT"
   gem.summary = %Q{Intelligent parsing of date/time attributes}
-	gem.description = %Q{Leverages your app's DATE_FORMATS hash when parsing dates and times or specify your own format on a per-app, per-model, or per-attribute basis. Fails back to the default Ruby implementation.}
+  gem.description = %Q{Leverages your app's DATE_FORMATS hash when parsing dates and times or specify your own format on a per-app, per-model, or per-attribute basis. Fails back to the default Ruby implementation.}
   gem.email = "mdaubert@gmail.com"
   gem.authors = ["Matthew Daubert"]
   # dependencies defined in Gemfile
