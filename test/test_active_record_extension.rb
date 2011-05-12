@@ -18,6 +18,12 @@ class TestActiveRecordExtension < Test::Unit::TestCase
 			TestModelA.new.test_date_attribute = "05/01/2011"
 		end
 
+   	def test_invalid_format_sets_value_to_nil
+		  model = TestModelA.new
+			model.test_date_attribute = "NOTAVALIDDATETIME"
+			assert_nil model.test_date_attribute
+		end
+
 	end
 
 	context "second test model" do
@@ -34,6 +40,7 @@ class TestActiveRecordExtension < Test::Unit::TestCase
 			TestModelB.new.test_datetime_attribute = "06/01/2011"
 		end
 
+		# TODO: Move to integration test
 		def test_smart_conversion
 			m = TestModelB.new
 			m.test_date_attribute = "12/01/2011"
