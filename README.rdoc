@@ -8,7 +8,7 @@ The smart_time gem allows your date/time ActiveRecord attributes to be parsed us
 
     gem install smart_time
 
-  ...and then install:
+...and then install:
 
     bundle install
 
