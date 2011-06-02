@@ -9,7 +9,7 @@ class TestActiveRecordExtension < Test::Unit::TestCase
   context "first test model" do
 
     class TestModelA < ActiveRecord::Base
-      def self.table_name() "test_models" end
+      set_table_name "test_models"
       smart_time
     end
 
@@ -29,7 +29,7 @@ class TestActiveRecordExtension < Test::Unit::TestCase
   context "second test model" do
 
     class TestModelB < ActiveRecord::Base
-      def self.table_name() "test_models" end
+      set_table_name "test_models"
       smart_time :test_time_attribute
       smart_time :test_date_attribute, :format => "%m/%d/%Y"
     end

@@ -23,10 +23,12 @@ module SmartTime
   end
 
   def self.parse(value, klass, options)
+    return value unless value.is_a?(String)
     PARSERS_BY_CLASS[klass].each do |parser|
       result = parser.parse(value, options)
       return result if result
     end
+    nil
   end
 
   ActiveRecord::Base.send(:include, SmartTime::ActiveRecordExtension)

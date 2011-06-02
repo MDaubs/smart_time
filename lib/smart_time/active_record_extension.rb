@@ -29,7 +29,7 @@ module SmartTime
         end
 
         # Override attribute write method
-        unless first_call
+        if first_call
           self.class_eval do
             def write_attribute(attr_name, value)
               if self.class.smart_time_attributes[attr_name.to_sym]

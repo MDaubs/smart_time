@@ -24,4 +24,9 @@ class TestSmartTime < Test::Unit::TestCase
     assert_equal "ZZZ", SmartTime.parse("05/01/2011", Date, {:format => "ABCDEFG"})
   end
 
+  def test_parse_date_time_returns_same_date_time
+    time_now = Time.now
+    assert_equal time_now, SmartTime.parse(time_now, Date, {})
+  end
+
 end
