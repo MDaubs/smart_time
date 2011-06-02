@@ -24,6 +24,12 @@ class TestActiveRecordExtension < Test::Unit::TestCase
       assert_nil model.test_date_attribute
     end
 
+    def test_smart_conversion_of_date
+      model = TestModelA.new
+      model.test_date_attribute = "05/01/2011"
+      assert_equal Date.new(2011,5,1), model.test_date_attribute
+    end
+
   end
 
   context "second test model" do
