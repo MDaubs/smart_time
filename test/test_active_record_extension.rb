@@ -40,8 +40,7 @@ class TestActiveRecordExtension < Test::Unit::TestCase
       TestModelB.new.test_datetime_attribute = "06/01/2011"
     end
 
-    # TODO: Move to integration test
-    def test_smart_conversion
+    def test_smart_conversion_of_date
       m = TestModelB.new
       m.test_date_attribute = "12/01/2011"
       assert_equal Date.new(2011,12,1), m.test_date_attribute
